@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="container-target" *ngIf="!visible">
+    <div [ngClass]="{'hidden': !displayGif}">
+      <img [src]="gifUrls[currentGifIndex]" alt="Gif">
+    </div>
+
+    <h1 id="question">¿Quieres ser mi San Valentin?</h1>
+    <div id="messageContainer" style="display: none;"></div>
+
+    <button id="siBtn" appGrowButton (click)="btnYes()">Sí</button>
+    <button id="noBtn" (click)="moveNoButton()">No</button>
+  </div>
+  <div class="container-final" *ngIf="visible">
+    <div [ngClass]="{'hidden': !displayGifFinal}" class="gifFinal">
+      <img [src]="gifUrlsFinal[currentGifIndexFinal]" alt="Gif">
+    </div>
+    <div class="textYes">
+      <label for="">Sabia que ibas a decir que si amor mio, TE AMO, te ganaste un cupon para una comida conmigo, valido hasta diciembre</label>
+    </div>
+    <div class="imgContent">
+      <img class="imgCupon" src="../../../assets/img/cupon.png" alt="">
+    </div>
+  </div>
+</div>
